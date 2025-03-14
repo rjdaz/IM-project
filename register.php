@@ -72,7 +72,7 @@
               style="
                text-decoration: none;" 
                onmouseover="this.style.textDecoration='underline'" 
-               onmouseout="this.style.textDecoration='none' 
+               onmouseout="this.style.textDecoration='none'" 
               "
             >LogIn</a></p>
             </div> 

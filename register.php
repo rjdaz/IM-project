@@ -17,17 +17,22 @@
           $checkData_sql = "SELECT * FROM user WHERE username = '$uName'";
           $checkingData = $conn->query($checkData_sql);
           $regCountRow = mysqli_num_rows($checkingData);
-
             if($regCountRow > 0){
               $err = "Already have same username. Try Again!!";
             }else{
-              $insert_sql = "INSERT INTO user (first_name, last_name, contact_number, username, password) VALUES ('$fName', '$lName', '$cNum', '$uName', '$pWord')";
-               $result = $conn->query($insert_sql);
-                if($result){
-                    $err = "New Account Added!!";
-                }else{
-                    $err =  "";
-                }
+              if(strlen($cNum) !== 11){
+                $err = "Oops! Your contact number must contain exactly 11 digits.";
+              }else{
+                $insert_sql = "INSERT INTO user (first_name, last_name, contact_number, username, password) VALUES ('$fName', '$lName', '$cNum', '$uName', '$pWord')";
+                $result = $conn->query($insert_sql);
+                  if($result){
+                      $err = "New Account Added!!";
+                      header("Location: login.php");
+                      exit();
+                  }else{
+                      $err =  "Incorrect Input!!";
+                  }
+              }
             }
         }
       }
@@ -50,9 +55,8 @@
     <div class="w-[400px] h-[400px] relative">
       <!-- Registration -->
       <div class="w-full h-full flex flex-col items-center justify-center bg-[#ffffff] blur-xs absolute">
-        
         <h1 class="w-full h-[15%] flex justify-center items-end text-[20pt] ">Registration</h1>
-        <form action="" method="POST" class="flex flex-col items-center w-full h-[80%]">
+        <form method="POST" class="flex flex-col items-center w-full h-[80%]">
             <div class="flex flex-col items-center justify-center w-full h-[70%]">
               <input type="text" placeholder="First Name" name="fname" class="h-[30px] mt-[10px] border-b w-[70%] pl-2  bg-transparent">
               <input type="text" placeholder="Last Name" name="lname" class="h-[30px] mt-[10px] border-b w-[70%] pl-2 bg-transparent" >

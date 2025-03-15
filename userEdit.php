@@ -60,44 +60,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <title>User Update Data</title>
 </head>
-<body class="w-full h-[729px] flex flex-col items-center justify-center bg-[#e6e6ff] ">
-  <p class="text-red-400 mb-2 flex justify-center items-center text-[15pt] px-10">
+<body style=" width: 100%; height: 729px; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #e6e6ff;">
+  <p class="text-red-400 mb-2 flex justify-center items-center text-[15pt] px-10"
+  style=" color: #f87171; margin-bottom: 8px; display: flex; justify-content: center; align-items: center; font-size: 15pt; padding-left: 40px; padding-right: 40px;">
       <?php
         echo $err;
       ?>
   </p>
-  <div class="w-[400px] h-[500px] relative">
+  <div style=" width: 400px;  height: 500px; position: relative;">
   <!-- Registration -->
-    <div class="w-full h-full flex flex-col items-center justify-center bg-[#ffffff] blur-xs absolute">
-      <h1 class="w-full h-[10%] flex justify-center items-end text-[20pt] ">Update Data</h1>
-      <form method="POST" class="flex flex-col items-center w-full h-[90%] ">
-          <div class="flex flex-col items-center justify-center w-full h-[90%]">
-            <label for="" class="w-[70%] mt-[10px]">First Name <span class="text-[10pt] text-green">
+    <div style=" width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #ffffff; position: absolute;">
+      <h1 style=" width: 100%; height: 10%; display: flex; justify-content: center; align-items: flex-end; font-size: 20pt;">Update Data</h1>
+      <form method="POST" style=" display: flex; flex-direction: column; align-items: center; width: 100%; height: 90%;">
+          <div style=" display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 90%;">
+            <label for="" style=" width: 70%; margin-top: 10px;">First Name <span style=" font-size: 10pt; color: green;">
               <?php
                  $showNewTag ? 'new' : '';
               ?>
             </span></label>
-            <input type="text" placeholder="First Name" name="fname" value='<?= $row['first_name'] ?>' class="h-[30px] border w-[70%] pl-2  bg-transparent">
-            <label for="" class="w-[70%] mt-[10px]">Last Name</label>
-            <input type="text" placeholder="Last Name" name="lname" value='<?= $row['last_name'] ?>'  class="h-[30px] border w-[70%] pl-2 bg-transparent" >
-            <label for="" class="w-[70%] mt-[10px]">Contact Number</label>
-            <input type="number" placeholder="Contact Number" name="cNum" value='<?= $row['contact_number'] ?>' class="h-[30px] border w-[70%] pl-2 bg-transparent ">
-            <label for="" class="w-[70%] mt-[10px]">Username</label>
-            <input type="text" placeholder="Username" name="uName" value='<?= $row['username'] ?>' class="h-[30px] border w-[70%] pl-2 bg-transparent ">
-            <label for="" class="w-[70%] mt-[10px]">Password</label>
-            <input type="text" placeholder="Password" name="pword" value='<?= $row['password'] ?>' class="h-[30px]  border w-[70%] pl-2 bg-transparent ">
+            <input type="text" placeholder="First Name" name="fname" value='<?= $row['first_name'] ?>' style=" height: 30px; width: 70%; border: 1px solid black padding-left: 8px; background-color: transparent;">
+            <label for="" style=" width: 70%; margin-top: 10px;">Last Name</label>
+            <input type="text" placeholder="Last Name" name="lname" value='<?= $row['last_name'] ?>'  style="height: 30px; width: 70%; border: 1px solid black padding-left: 8px; background-color: transparent;" >
+            <label for="" style=" width: 70%; margin-top: 10px;">Contact Number</label>
+            <input type="number" placeholder="Contact Number" name="cNum" value='<?= $row['contact_number'] ?>' style="height: 30px; width: 70%; border: 1px solid black padding-left: 8px; background-color: transparent; ">
+            <label for="" style=" width: 70%; margin-top: 10px;">Username</label>
+            <input type="text" placeholder="Username" name="uName" value='<?= $row['username'] ?>' style="height: 30px; width: 70%; border: 1px solid black padding-left: 8px; background-color: transparent; ">
+            <label for="" style=" width: 70%; margin-top: 10px;">Password</label>
+            <input type="text" placeholder="Password" name="pword" value='<?= $row['password'] ?>' style=" height: 30px; width: 70%; border: 1px solid black; padding-left: 8px; background-color: transparent; ">
           </div>
-          <div class="flex items-center w-full h-[10%] justify-center">
+          <div style=" display: flex; align-items: center; justify-content: center; width: 100%; height: 10%;">
             <input type='hidden' name='employeeID' value='<?= $userId ?>'>
-            <button type="submit" name="updateData" class="w-[70%] py-2 rounded-[50px] bg-[#0f57fe] text-white">Update</button>
+            <button type="submit" name="updateData" style="  width: 70%; padding: 8px 0; border-radius: 50px; background-color: #0f57fe; color: white; text-align: center;">Update</button>
           </div>
-          <div class="w-full h-[10%] flex justify-center items-start">
-          <p>Do you want to update the data? <a href="welcome.php" class=" text-[#0f57fe] text-[10pt]"
+          <div style=" width: 100%; height: 10%; display: flex; justify-content: center; align-items: flex-start;">
+          <p>Do you want to update the data? <a href="welcome.php" 
             style="
-              text-decoration: none;" 
+              text-decoration: none;
+               color: #0f57fe;
+               font-size: 10pt;" 
               onmouseover="this.style.textDecoration='underline'" 
               onmouseout="this.style.textDecoration='none' 
             "

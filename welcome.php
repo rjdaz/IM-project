@@ -55,9 +55,9 @@ session_start();
     }
   </style>
 </head>
-<body class="w-full h-[729px] flex flex-col items-center justify-start bg-[#e6e6ff] relative">
-  <div class="w-[60%] h-[30px] flex justify-end items-center mt-10">
-    <a href="login.php" class="border bg-[#0f57fe] py-2 px-5 rounded-[50px] text-white">log out</a>
+<body style=" width: 100%; height: 729px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; background-color: #e6e6ff; position: relative;">
+  <div style=" width: 60%; height: 30px; display: flex; justify-content: flex-end; align-items: center;  margin-top: 10px;">
+    <a href="login.php" style="border: 1px solid transparent; background-color: #0f57fe; padding: 8px 20px; border-radius: 50px; color: white; text-align: center; cursor: pointer;">log out</a>
   </div>
   <h1 class="w-[60%] h-[50px] text-center text-[30pt] mb-5">  
     List of Users

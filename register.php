@@ -69,7 +69,7 @@
               <button type="submit" name="insert" style=" width: 70%; padding-top: 8px; padding-bottom: 8px; border-radius: 50px; background-color: #0f57fe; color: white; text-align: center; border: none; cursor: pointer;">Register</button>
             </div>
             <div style=" width: 100%; height: 10%; display: flex; justify-content: center; align-items: flex-start;">
-            <p>Already have an account? <a href="login.php" 
+            <p>Already have an account?  <a href="login.php" 
               style="
                text-decoration: none;
                color: #0f57fe;

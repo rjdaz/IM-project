@@ -56,13 +56,13 @@ session_start();
 </head>
 <body style=" width: 100%; height: 729px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; background-color: #e6e6ff; position: relative;">
   <div style=" width: 60%; height: 30px; display: flex; justify-content: flex-end; align-items: center;  margin-top: 60px;">
-    <a href="login.php" style="border: 1px solid transparent; background-color: #0f57fe; padding: 8px 20px; border-radius: 50px; color: white; text-align: center; cursor: pointer; text-decoration: none;">Log out</a>
+    <a href="login.php" style="border: 1px solid transparent; background-color: #0f57fe; padding: 8px 20px; border-radius: 50px; color: white; text-align: center; cursor: pointer; text-decoration: none;">Log Out</a>
   </div>
   <h1 style=" width: 60% height: 50px; text-align: center; font-size: 30pt; margin-bottom: 20px;">  
     List of Users
   </h1>
   <table style=" width: 900px; border-collapse: collapse; border: 1px solid black; text-align: center; background-color: white;">
-        <tr style="border: 1px solid black;; background-color: #b3c6ff;">
+        <tr style="height: 40px; border: 1px solid black; background-color: #b3c6ff;">
             <th style="border: 1px solid black;">ID</th>
             <th style="border: 1px solid black;">First Name</th>
             <th style="border: 1px solid black;">Last Name</th>

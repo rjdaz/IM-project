@@ -4,7 +4,6 @@
 
   $userId = "";
   $err = "";
-  $showNewTag = false;
 
     if(isset($_SESSION['emp_id'])){
       $userId = $_SESSION['emp_id'];
@@ -60,12 +59,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <title>User Update Data</title>
 </head>
-<body style=" width: 100%; height: 729px; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #e6e6ff;">
-  <p class="text-red-400 mb-2 flex justify-center items-center text-[15pt] px-10"
-  style=" color: #f87171; margin-bottom: 8px; display: flex; justify-content: center; align-items: center; font-size: 15pt; padding-left: 40px; padding-right: 40px;">
+<body style="font-family: arial; width: 100%; height: 729px; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #e6e6ff;">
+  <p  style=" color: #f87171; margin-bottom: 8px; display: flex; justify-content: center; align-items: center; font-size: 15pt; padding-left: 40px; padding-right: 40px;">
       <?php
         echo $err;
       ?>
@@ -74,33 +71,57 @@
   <!-- Registration -->
     <div style=" width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #ffffff; position: absolute;">
       <h1 style=" width: 100%; height: 10%; display: flex; justify-content: center; align-items: flex-end; font-size: 20pt;">Update Data</h1>
-      <form method="POST" style=" display: flex; flex-direction: column; align-items: center; width: 100%; height: 90%;">
+      <form method="POST" 
+            style=" display: flex; flex-direction: column; align-items: center; width: 100%; height: 90%;">
           <div style=" display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 90%;">
-            <label for="" style=" width: 70%; margin-top: 10px;">First Name <span style=" font-size: 10pt; color: green;">
-              <?php
-                 $showNewTag ? 'new' : '';
-              ?>
-            </span></label>
-            <input type="text" placeholder="First Name" name="fname" value='<?= $row['first_name'] ?>' style=" height: 30px; width: 70%; border: 1px solid black padding-left: 8px; background-color: transparent;">
-            <label for="" style=" width: 70%; margin-top: 10px;">Last Name</label>
-            <input type="text" placeholder="Last Name" name="lname" value='<?= $row['last_name'] ?>'  style="height: 30px; width: 70%; border: 1px solid black padding-left: 8px; background-color: transparent;" >
-            <label for="" style=" width: 70%; margin-top: 10px;">Contact Number</label>
-            <input type="number" placeholder="Contact Number" name="cNum" value='<?= $row['contact_number'] ?>' style="height: 30px; width: 70%; border: 1px solid black padding-left: 8px; background-color: transparent; ">
-            <label for="" style=" width: 70%; margin-top: 10px;">Username</label>
-            <input type="text" placeholder="Username" name="uName" value='<?= $row['username'] ?>' style="height: 30px; width: 70%; border: 1px solid black padding-left: 8px; background-color: transparent; ">
-            <label for="" style=" width: 70%; margin-top: 10px;">Password</label>
-            <input type="text" placeholder="Password" name="pword" value='<?= $row['password'] ?>' style=" height: 30px; width: 70%; border: 1px solid black; padding-left: 8px; background-color: transparent; ">
+            <label  for="" 
+                    style=" width: 70%; margin-top: 10px;">First Name</label>
+            <input  type="text" 
+                    placeholder="First Name" 
+                    name="fname" 
+                    value='<?= $row['first_name'] ?>' 
+                    style=" height: 30px; width: 70%; border: 1px solid gray; padding-left: 8px; background-color: transparent;">
+            <label  for="" 
+                    style=" width: 70%; margin-top: 10px;">Last Name</label>
+            <input  type="text" 
+                    placeholder="Last Name" 
+                    name="lname" 
+                    value='<?= $row['last_name'] ?>'  
+                    style="height: 30px; width: 70%; border: 1px solid gray; padding-left: 8px; background-color: transparent;" >
+            <label  for="" 
+                    style=" width: 70%; margin-top: 10px;">Contact Number</label>
+            <input  type="number" 
+                    placeholder="Contact Number" 
+                    name="cNum" 
+                    value='<?= $row['contact_number'] ?>' 
+                    style="height: 30px; width: 70%; border: 1px solid gray; padding-left: 8px; background-color: transparent; ">
+            <label  for="" 
+                    style=" width: 70%; margin-top: 10px;">Username</label>
+            <input  type="text" 
+                    placeholder="Username" 
+                    name="uName" 
+                    value='<?= $row['username'] ?>' 
+                    style="height: 30px; width: 70%; border: 1px solid gray; padding-left: 8px; background-color: transparent; ">
+            <label  for="" 
+                    style=" width: 70%; margin-top: 10px;">Password</label>
+            <input  type="text" 
+                    placeholder="Password" 
+                    name="pword" 
+                    value='<?= $row['password'] ?>' 
+                    style=" height: 30px; width: 70%; border: 1px solid gray; padding-left: 8px; background-color: transparent; ">
           </div>
-          <div style=" display: flex; align-items: center; justify-content: center; width: 100%; height: 10%;">
-            <input type='hidden' name='employeeID' value='<?= $userId ?>'>
-            <button type="submit" name="updateData" style="  width: 70%; padding: 8px 0; border-radius: 50px; background-color: #0f57fe; color: white; text-align: center;">Update</button>
+          <div  style=" display: flex; align-items: center; justify-content: center; width: 100%; height: 10%;">
+            <input  type='hidden' 
+                    name='employeeID' 
+                    value='<?= $userId ?>'>
+            <button type="submit" 
+                    name="updateData" 
+                    style="  width: 70%; height: 100%; padding: 8px 0; border:none; border-radius: 50px; background-color: #0f57fe; color: white; text-align: center;">Update</button>
           </div>
-          <div style=" width: 100%; height: 10%; display: flex; justify-content: center; align-items: flex-start;">
+          <div style="margin-top: -10px; width: 100%; height: 10%; display: flex; justify-content: center; align-items: flex-start;font-size:10pt;">
           <p>Do you want to update the data? <a href="welcome.php" 
             style="
-              text-decoration: none;
-               color: #0f57fe;
-               font-size: 10pt;" 
+              text-decoration: none; color: #0f57fe;" 
               onmouseover="this.style.textDecoration='underline'" 
               onmouseout="this.style.textDecoration='none' 
             "

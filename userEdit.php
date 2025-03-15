@@ -33,11 +33,13 @@
           if(empty($newFname) || empty($newLname) || empty($newCnum) || empty($newUname) || empty($newPword)){
             $err = "All fields are required to input data!!";
           }else{
-            if($newFname !== $row['first_name'] && $newFname !== ""){
-              $showNewTag = true;
-            }
-
-            $update_sql = "UPDATE user
+            $checkData_sql = "SELECT * FROM user WHERE username = '$newUname' AND id != '$emp_id'";
+            $checkingData = $conn->query($checkData_sql);
+            $regCountRow = mysqli_num_rows($checkingData);
+            if($regCountRow > 0){
+              $err = "Usename already exist!";
+            }else{
+              $update_sql = "UPDATE user
                            SET first_name = '$newFname', 
                                 last_name = '$newLname', 
                                 contact_number = '$newCnum', 
@@ -47,6 +49,7 @@
             $conn->query($update_sql);
             header("location: welcome.php");
             exit();
+            } 
           }
       }
     }

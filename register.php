@@ -43,18 +43,18 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Registration</title>
   </head>
-  <body class="w-full h-[729px] flex flex-col items-center justify-center bg-[#e6e6ff] ">
-    <p class="text-red-400 mb-2 flex justify-center items-center text-[15pt] px-10">
+  <body style="width: 100%; height: 729px; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #e6e6ff;">
+    <p  style="color: #f87171; margin-bottom: 0.5rem; display: flex; justify-content: center; align-items: center; font-size: 15pt; padding-left: 2.5rem; padding-right: 2.5rem;">
       <?php
         echo $err;
       ?>
     </p>
-    <div class="w-[400px] h-[400px] relative">
+    <div  style="width: 400px; height: 400px; position: relative;">
       <!-- Registration -->
-      <div class="w-full h-full flex flex-col items-center justify-center bg-[#ffffff] blur-xs absolute">
+      <div  style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #ffffff; position: absolute;">
         <h1 class="w-full h-[15%] flex justify-center items-end text-[20pt] ">Registration</h1>
         <form method="POST" class="flex flex-col items-center w-full h-[80%]">
             <div class="flex flex-col items-center justify-center w-full h-[70%]">

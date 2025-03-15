@@ -60,11 +60,11 @@
               name="login" 
               style=" width: 70%; height: 100%; padding-top: 8px; padding-bottom: 8px; border: none; border-radius: 50px; background-color: #0f57fe; color: white; text-align: center;">Log In</button>
           </div>
-          <div  style=" width: 100%; height: 10%; display: flex; justify-content: center; align-items: flex-start;">
+          <div  style="margin-top:-10px; width: 100%; height: 10%; display: flex; justify-content: center; align-items: flex-start;">
           <p style="">Don't have an account? 
             <a  href="register.php"
                 style="
-                  text-decoration: none; color: #0f57fe; font-size: 10pt;" 
+                  text-decoration: none; color: #0f57fe;" 
                   onmouseover="this.style.textDecoration='underline'" 
                   onmouseout="this.style.textDecoration='none' 
                 "

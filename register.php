@@ -46,7 +46,7 @@
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Registration</title>
   </head>
-  <body style="width: 100%; height: 729px; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #e6e6ff;">
+  <body style="font-family: arial; width: 100%; height: 729px; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #e6e6ff;">
     <p  style="color: #f87171; margin-bottom: 0.5rem; display: flex; justify-content: center; align-items: center; font-size: 15pt; padding-left: 2.5rem; padding-right: 2.5rem;">
       <?php
         echo $err;
@@ -55,25 +55,42 @@
     <div  style="width: 400px; height: 400px; position: relative;">
       <!-- Registration -->
       <div  style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #ffffff; position: absolute;">
-        <h1 class="w-full h-[15%] flex justify-center items-end text-[20pt] "
-        style=" width: 100%; height: 15%; display: flex; justify-content: center; align-items: flex-end; font-size: 20pt;">Registration</h1>
-        <form method="POST" style=" display: flex; flex-direction: column; align-items: center; width: 100%; height: 80%;">
+        <h1 style=" width: 100%; height: 15%; display: flex; justify-content: center; align-items: flex-end; font-size: 20pt;">Registration</h1>
+        <form method="POST" 
+              style=" display: flex; flex-direction: column; align-items: center; width: 100%; height: 80%;">
             <div  style=" display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 70%;">
-              <input type="text" placeholder="First Name" name="fname" style=" height: 30px; margin-top: 10px; width: 70%; border-bottom: 1px solid black; padding-left: 8px; background-color: transparent;">
-              <input type="text" placeholder="Last Name" name="lname" style=" height: 30px; margin-top: 10px; width: 70%; border-bottom: 1px solid black; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;" >
-              <input type="number" placeholder="Contact Number" name="cNum" style=" height: 30px; margin-top: 10px; width: 70%; border-bottom: 1px solid black; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0; border-width: 1px;">
-              <input type="text" placeholder="Username" name="uName" style=" height: 30px; margin-top: 10px; width: 70%; border-bottom: 1px solid black; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;">
-              <input type="password" placeholder="Password" name="pword" style="height: 30px; margin-top: 10px; width: 70%; border-bottom: 1px solid black; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;">
+              <input  type="text" 
+                      placeholder="First Name" 
+                      name="fname" 
+                      style=" height: 30px; margin-top: 10px; width: 70%; border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent;">
+              <input  type="text" 
+                      placeholder="Last Name" 
+                      name="lname" 
+                      style=" height: 30px; margin-top: 10px; width: 70%;border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;" >
+              <input  type="number" 
+                      placeholder="Contact Number" 
+                      name="cNum" 
+                      style=" height: 30px; margin-top: 10px; width: 70%; border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0; border-width: 1px;">
+              <input  type="text" 
+                      placeholder="Username" 
+                      name="uName" 
+                      style=" height: 30px; margin-top: 10px; width: 70%; border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;">
+              <input  type="password" 
+                      placeholder="Password" 
+                      name="pword" 
+                      style="height: 30px; margin-top: 10px; width: 70%; border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;">
             </div>
-            <div style=" display: flex; align-items: center; justify-content: center; width: 100%; height: 15%;">
-              <button type="submit" name="insert" style=" width: 70%; padding-top: 8px; padding-bottom: 8px; border-radius: 50px; background-color: #0f57fe; color: white; text-align: center; border: none; cursor: pointer;">Register</button>
+            <div  style="margin-top:5px; display: flex; align-items: center; justify-content: center; width: 100%; height: 15%;">
+              <button type="submit" 
+                      name="insert" 
+                      style=" width: 70%; height: 80%; padding-top: 8px; padding-bottom: 8px; border-radius: 50px; background-color: #0f57fe; color: white; text-align: center; border: none; cursor: pointer;">Register</button>
             </div>
-            <div style=" width: 100%; height: 10%; display: flex; justify-content: center; align-items: flex-start;">
-            <p>Already have an account?  <a href="login.php" 
+            <div style="margin-top:-15px; width: 100%; height: 10%; display: flex; justify-content: center; align-items: start;">
+            <p style="">Already have an account?  <a href="login.php" 
               style="
                text-decoration: none;
-               color: #0f57fe;
-               font-size: 10pt;" 
+               color: #0f57fe;                                                
+               " 
                onmouseover="this.style.textDecoration='underline'" 
                onmouseout="this.style.textDecoration='none'" 
               "

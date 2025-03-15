@@ -55,22 +55,25 @@
     <div  style="width: 400px; height: 400px; position: relative;">
       <!-- Registration -->
       <div  style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #ffffff; position: absolute;">
-        <h1 class="w-full h-[15%] flex justify-center items-end text-[20pt] ">Registration</h1>
-        <form method="POST" class="flex flex-col items-center w-full h-[80%]">
-            <div class="flex flex-col items-center justify-center w-full h-[70%]">
-              <input type="text" placeholder="First Name" name="fname" class="h-[30px] mt-[10px] border-b w-[70%] pl-2  bg-transparent">
-              <input type="text" placeholder="Last Name" name="lname" class="h-[30px] mt-[10px] border-b w-[70%] pl-2 bg-transparent" >
-              <input type="number" placeholder="Contact Number" name="cNum" class="h-[30px] mt-[10px] border-b w-[70%] pl-2 bg-transparent ">
-              <input type="text" placeholder="Username" name="uName" class="h-[30px] mt-[10px] border-b w-[70%] pl-2 bg-transparent ">
-              <input type="password" placeholder="Password" name="pword" class="h-[30px] mt-[10px] border-b w-[70%] pl-2 bg-transparent ">
+        <h1 class="w-full h-[15%] flex justify-center items-end text-[20pt] "
+        style=" width: 100%; height: 15%; display: flex; justify-content: center; align-items: flex-end; font-size: 20pt;">Registration</h1>
+        <form method="POST" style=" display: flex; flex-direction: column; align-items: center; width: 100%; height: 80%;">
+            <div  style=" display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 70%;">
+              <input type="text" placeholder="First Name" name="fname" style=" height: 30px; margin-top: 10px; width: 70%; border-bottom: 1px solid black; padding-left: 8px; background-color: transparent;">
+              <input type="text" placeholder="Last Name" name="lname" style=" height: 30px; margin-top: 10px; width: 70%; border-bottom: 1px solid black; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;" >
+              <input type="number" placeholder="Contact Number" name="cNum" style=" height: 30px; margin-top: 10px; width: 70%; border-bottom: 1px solid black; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0; border-width: 1px;">
+              <input type="text" placeholder="Username" name="uName" style=" height: 30px; margin-top: 10px; width: 70%; border-bottom: 1px solid black; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;">
+              <input type="password" placeholder="Password" name="pword" style="height: 30px; margin-top: 10px; width: 70%; border-bottom: 1px solid black; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;">
             </div>
-            <div class="flex items-center w-full h-[15%] justify-center">
-              <button type="submit" name="insert" class="w-[70%] py-2 rounded-[50px] bg-[#0f57fe] text-white">Register</button>
+            <div style=" display: flex; align-items: center; justify-content: center; width: 100%; height: 15%;">
+              <button type="submit" name="insert" style=" width: 70%; padding-top: 8px; padding-bottom: 8px; border-radius: 50px; background-color: #0f57fe; color: white; text-align: center; border: none; cursor: pointer;">Register</button>
             </div>
-            <div class="w-full h-[10%] flex justify-center items-start">
-            <p>Already have an account? <a href="login.php" class=" text-[#0f57fe] text-[10pt]"
+            <div style=" width: 100%; height: 10%; display: flex; justify-content: center; align-items: flex-start;">
+            <p>Already have an account? <a href="login.php" 
               style="
-               text-decoration: none;" 
+               text-decoration: none;
+               color: #0f57fe;
+               font-size: 10pt;" 
                onmouseover="this.style.textDecoration='underline'" 
                onmouseout="this.style.textDecoration='none'" 
               "

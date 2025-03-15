@@ -59,38 +59,38 @@ session_start();
   <div style=" width: 60%; height: 30px; display: flex; justify-content: flex-end; align-items: center;  margin-top: 10px;">
     <a href="login.php" style="border: 1px solid transparent; background-color: #0f57fe; padding: 8px 20px; border-radius: 50px; color: white; text-align: center; cursor: pointer;">log out</a>
   </div>
-  <h1 class="w-[60%] h-[50px] text-center text-[30pt] mb-5">  
+  <h1 style=" width: 60% height: 50px; text-align: center; font-size: 30pt; margin-bottom: 20px;">  
     List of Users
   </h1>
-  <table class="border-2 w-[900px] text-center border-black bg-white">
-        <tr class="border border-black bg-[#b3c6ff]">
-            <th class="border-2 border-black">ID</th>
-            <th class="border-2 border-black">First Name</th>
-            <th class="border-2 border-black">Last Name</th>
-            <th class="border-2 border-black">Contact Number</th>
-            <th class="border-2 border-black">Username</th>
-            <th class="border-2 border-black">Password</th>
-            <th class="border-2 border-black w-[30px]">Action</th>
+  <table style=" width: 900px; border: 2px solid black; text-align: center; background-color: white;">
+        <tr  style="border: 1px solid black; background-color: #b3c6ff;">
+            <th style="border: 2px solid black;">ID</th>
+            <th style="border: 2px solid black;">First Name</th>
+            <th style="border: 2px solid black;">Last Name</th>
+            <th style="border: 2px solid black;">Contact Number</th>
+            <th style="border: 2px solid black;">Username</th>
+            <th style="border: 2px solid black;">Password</th>
+            <th style=" width: 30px; border: 2px solid black;">Action</th>
         </tr>
             <?php
                 if($showlist->num_rows > 0){
                   while($row = $showlist->fetch_assoc()){
-                    echo "<tr class='list border h-[50px]'>
+                    echo "<tr class='list' style='border: 1px solid black; height: 50px;'>
                           <td>{$row['id']}</td>
-                          <td class='text-left pl-4 border'>{$row['first_name']}</td>
-                          <td class='text-left pl-4 border'>{$row['last_name']}</td>
-                          <td class='border'>{$row['contact_number']}</td>
-                          <td class='border'>{$row['username']}</td>
-                          <td class='border'>{$row['password']}</td>
-                          <td class='flex flex-row flex items-center h-[50px]'>    
-                              <form method='POST' class='h-full flex items-center'>
+                          <td style= text-align: left;  padding-left: 16px; border: 1px solid black;>{$row['first_name']}</td>
+                          <td style=' text-align: left; padding-left: 16px; border: 1px solid black;'>{$row['last_name']}</td>
+                          <td style=' border: 1px solid black;'>{$row['contact_number']}</td>
+                          <td style=' border: 1px solid black;'>{$row['username']}</td>
+                          <td style=' border: 1px solid black;'>{$row['password']}</td>
+                          <td style=' display: flex; flex-direction: row; align-items: center; height: 50px;'>    
+                              <form method='POST' style='height: 100%; display: flex; align-items: center;'>
                                   <input type='hidden' name='emp_id' value='{$row['id']}'>
-                                  <button class='delete h-[30px] p-2 border border-black rounded-[5px] flex ml-2 items-center mr-3' type='submit' name='delete'> Delete </button>
+                                  <button class='delete' style='height: 30px; padding: 8px; border: 1px solid black; border-radius: 5px; display: flex; align-items: center; margin-left: 8px; margin-right: 12px;' type='submit' name='delete'> Delete </button>
                               </form>
                               <form method='POST' class='h-full flex items-center'>
                                   <input type='hidden' name='emp_id' value='{$row['id']}'>
                                   <button 
-                                    class='update h-[30px] p-2 border border-black rounded-[5px] flex items-center mr-2'
+                                    class='update'  style='height: 30px; padding: 8px; border: 1px solid black; border-radius: 5px; display: flex; align-items: center; margin-right: 8px;'
                                     name='update'
                                     > Update </button>
                               </form>                   

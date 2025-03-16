@@ -60,23 +60,28 @@
             <div  style=" display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 70%;">
               <input  type="text" 
                       placeholder="First Name" 
-                      name="fname" 
+                      name="fname"
+                      required
                       style=" height: 30px; margin-top: 10px; width: 70%; border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent;">
               <input  type="text" 
                       placeholder="Last Name" 
-                      name="lname" 
+                      name="lname"
+                      required
                       style=" height: 30px; margin-top: 10px; width: 70%;border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;" >
               <input  type="number" 
                       placeholder="Contact Number" 
-                      name="cNum" 
+                      name="cNum"
+                      required
                       style=" height: 30px; margin-top: 10px; width: 70%; border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0; border-width: 1px;">
               <input  type="text" 
                       placeholder="Username" 
-                      name="uName" 
+                      name="uName"
+                      required
                       style=" height: 30px; margin-top: 10px; width: 70%; border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;">
               <input  type="password" 
                       placeholder="Password" 
-                      name="pword" 
+                      name="pword"
+                      required 
                       style="height: 30px; margin-top: 10px; width: 70%; border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;">
             </div>
             <div  style="margin-top:5px; display: flex; align-items: center; justify-content: center; width: 100%; height: 15%;">

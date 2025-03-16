@@ -79,7 +79,7 @@
             <input  type="text" 
                     placeholder="First Name" 
                     name="fname" 
-                    value='<?= $row['first_name'] ?>' 
+                    value='<?= $row['first_name'] ?>'
                     style=" height: 30px; width: 70%; border: 1px solid gray; padding-left: 8px; background-color: transparent;">
             <label  for="" 
                     style=" width: 70%; margin-top: 10px;">Last Name</label>
@@ -116,12 +116,12 @@
                     value='<?= $userId ?>'>
             <button type="submit" 
                     name="updateData" 
-                    style="  width: 70%; height: 100%; padding: 8px 0; border:none; border-radius: 50px; background-color: #0f57fe; color: white; text-align: center;">Update</button>
+                    style="  width: 70%; height: 100%; padding: 8px 0; border:none; border-radius: 50px; background-color: #156082; color: white; text-align: center;">Update</button>
           </div>
           <div style="margin-top: -10px; width: 100%; height: 10%; display: flex; justify-content: center; align-items: flex-start;font-size:10pt;">
           <p>Do you want to update the data? <a href="welcome.php" 
             style="
-              text-decoration: none; color: #0f57fe;" 
+              text-decoration: none; color: #156082;" 
               onmouseover="this.style.textDecoration='underline'" 
               onmouseout="this.style.textDecoration='none' 
             "

@@ -31,7 +31,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
   </head>
-  <body style="width: 100%; height: 729px; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #e6e6ff; margin: 0; padding: 0; font-family: arial;">
+  <body style="font-family: arial; width: 100%; height: 729px; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #e6e6ff;">
     <p  style ="color: #f87171; margin-bottom: 0.5rem; display: flex; justify-content: center; align-items: center; font-size: 15pt; padding-left: 2.5rem; padding-right: 2.5rem;">
       <?php
         echo $err;
@@ -58,13 +58,13 @@
             <button 
               type="submit" 
               name="login" 
-              style=" width: 70%; height: 100%; padding-top: 8px; padding-bottom: 8px; border: none; border-radius: 50px; background-color: #0f57fe; color: white; text-align: center;">Log In</button>
+              style=" width: 70%; height: 100%; padding-top: 8px; padding-bottom: 8px; border: none; border-radius: 50px; background-color: #156082; color: white; text-align: center;">Log In</button>
           </div>
           <div  style="margin-top:-10px; width: 100%; height: 10%; display: flex; justify-content: center; align-items: flex-start;">
           <p style="">Don't have an account? 
             <a  href="register.php"
                 style="
-                  text-decoration: none; color: #0f57fe;" 
+                  text-decoration: none; color: #156082;" 
                   onmouseover="this.style.textDecoration='underline'" 
                   onmouseout="this.style.textDecoration='none' 
                 "

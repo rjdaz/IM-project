@@ -61,28 +61,33 @@
               <input  type="text" 
                       placeholder="First Name" 
                       name="fname" 
+                      required
                       style=" height: 30px; margin-top: 10px; width: 70%; border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent;">
               <input  type="text" 
                       placeholder="Last Name" 
                       name="lname" 
+                      required
                       style=" height: 30px; margin-top: 10px; width: 70%;border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;" >
               <input  type="number" 
                       placeholder="Contact Number" 
                       name="cNum" 
+                      required
                       style=" height: 30px; margin-top: 10px; width: 70%; border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0; border-width: 1px;">
               <input  type="text" 
                       placeholder="Username" 
                       name="uName" 
+                      required
                       style=" height: 30px; margin-top: 10px; width: 70%; border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;">
               <input  type="password" 
                       placeholder="Password" 
                       name="pword" 
+                      required
                       style="height: 30px; margin-top: 10px; width: 70%; border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;">
             </div>
             <div  style="margin-top:5px; display: flex; align-items: center; justify-content: center; width: 100%; height: 15%;">
               <button type="submit" 
                       name="insert" 
-                      style=" width: 70%; height: 80%; padding-top: 8px; padding-bottom: 8px; border-radius: 50px; background-color: #0f57fe; color: white; text-align: center; border: none; cursor: pointer;">Register</button>
+                      style=" width: 70%; height: 80%; padding-top: 8px; padding-bottom: 8px; border-radius: 50px; background-color: #156082; color: white; text-align: center; border: none; cursor: pointer;">Register</button>
             </div>
             <div style="margin-top:-15px; width: 100%; height: 10%; display: flex; justify-content: center; align-items: start;">
             <p style="">Already have an account?  <a href="login.php" 

@@ -52,17 +52,25 @@ session_start();
     .list:hover{
       background-color: #e6eeff;
     }
+
+    tr:nth-child(even){
+      background-color: #83cceb;
+    }
+
+    tr:nth-child(odd){
+      background-color: #c0e6f5;
+    }
   </style>
 </head>
 <body style=" width: 100%; height: 729px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; background-color: #e6e6ff; position: relative;">
-  <div style=" width: 60%; height: 30px; display: flex; justify-content: flex-end; align-items: center;  margin-top: 60px;">
-    <a href="login.php" style="border: 1px solid transparent; background-color: #0f57fe; padding: 8px 20px; border-radius: 50px; color: white; text-align: center; cursor: pointer; text-decoration: none;">Log Out</a>
+  <div style=" width: 900px; height: 30px; display: flex; justify-content: flex-end; align-items: center;  margin-top: 60px;">
+    <a href="login.php" style="border: 1px solid transparent; background-color: #156082; padding: 8px 20px; border-radius: 50px; color: white; text-align: center; cursor: pointer; text-decoration: none;">Log Out</a>
   </div>
-  <h1 style=" width: 60% height: 50px; text-align: center; font-size: 30pt; margin-bottom: 20px;">  
+  <h1 style=" width: 900px; height: 50px; text-align: center; font-size: 30pt; margin-bottom: 20px;">  
     List of Users
   </h1>
-  <table style=" width: 900px; border-collapse: collapse; border: 1px solid black; text-align: center; background-color: white;">
-        <tr style="height: 40px; border: 1px solid black; background-color: #b3c6ff;">
+  <table style=" width: 900px; border-collapse: collapse; border: none; text-align: center; background-color: white;">
+        <tr style="height: 40px; border: 1px solid black; background-color: #156082; color: white;">
             <th style="border: 1px solid black;">ID</th>
             <th style="border: 1px solid black;">First Name</th>
             <th style="border: 1px solid black;">Last Name</th>
@@ -74,7 +82,7 @@ session_start();
             <?php
                 if($showlist->num_rows > 0){
                   while($row = $showlist->fetch_assoc()){
-                    echo "<tr class='list' style='border: 1px solid black; height: 50px;'>
+                    echo "<tr class='list' style='height: 50px;'>
                           <td style='text-align: left;  padding-left: 16px;'>{$row['id']}</td>
                           <td style= 'text-align: left;  padding-left: 16px;'>{$row['first_name']}</td>
                           <td style=' text-align: left; padding-left: 16px;'>{$row['last_name']}</td>

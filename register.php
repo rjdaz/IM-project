@@ -87,7 +87,7 @@
             <div  style="margin-top:5px; display: flex; align-items: center; justify-content: center; width: 100%; height: 15%;">
               <button type="submit" 
                       name="insert" 
-                      style=" width: 70%; height: 80%; padding-top: 8px; padding-bottom: 8px; border-radius: 50px; background-color: #0f57fe; color: white; text-align: center; border: none; cursor: pointer;">Register</button>
+                      style=" width: 70%; height: 80%; padding-top: 8px; padding-bottom: 8px; border-radius: 50px; background-color: #0f57fe; color: white; text-align: center; border: none; cursor: pointer;">Submit</button>
             </div>
             <div style="margin-top:-15px; width: 100%; height: 10%; display: flex; justify-content: center; align-items: start;">
             <p style="">Already have an account?  <a href="login.php" 

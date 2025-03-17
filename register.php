@@ -62,16 +62,28 @@
                       placeholder="First Name" 
                       name="fname"
                       required
+                      value="<?php 
+                        if(isset($_POST['fname']))
+                          echo $_POST['fname']
+                      ?>"
                       style=" height: 30px; margin-top: 10px; width: 70%; border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent;">
               <input  type="text" 
                       placeholder="Last Name" 
                       name="lname"
                       required
+                      value="<?php 
+                        if(isset($_POST['lname']))
+                          echo $_POST['lname']
+                      ?>"
                       style=" height: 30px; margin-top: 10px; width: 70%;border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;" >
               <input  type="number" 
                       placeholder="Contact Number" 
                       name="cNum"
                       required
+                      value="<?php 
+                        if(isset($_POST['cNum']))
+                          echo $_POST['cNum']
+                      ?>"
                       style=" height: 30px; margin-top: 10px; width: 70%; border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0; border-width: 1px;">
               <input  type="text" 
                       placeholder="Username" 
@@ -82,6 +94,10 @@
                       placeholder="Password" 
                       name="pword"
                       required 
+                      value="<?php 
+                        if(isset($_POST['pword']))
+                          echo $_POST['pword']
+                      ?>"
                       style="height: 30px; margin-top: 10px; width: 70%; border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;">
             </div>
             <div  style="margin-top:5px; display: flex; align-items: center; justify-content: center; width: 100%; height: 15%;">

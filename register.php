@@ -2,6 +2,8 @@
   include 'connection.php';
 
   $err = "";
+  $regCountRow = "";
+  $cNum = "";
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
       if(isset($_POST['insert'])){
@@ -81,14 +83,30 @@
                       name="cNum"
                       required
                       value="<?php 
-                        if(isset($_POST['cNum']))
-                          echo $_POST['cNum']
+                        if(strlen($cNum) !== 11){
+                          echo "";
+                        }else{
+                          if(isset($_POST['cNum'])){
+                          echo $_POST['cNum'];
+                          }
+                        }
+                        
                       ?>"
                       style=" height: 30px; margin-top: 10px; width: 70%; border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0; border-width: 1px;">
               <input  type="text" 
                       placeholder="Username" 
                       name="uName"
                       required
+                      value="<?php 
+                        if($regCountRow > 0){
+                          echo "";
+                        }else{
+                          if(isset($_POST['uName'])){
+                          echo $_POST['uName'];
+                          }
+                        }
+                          
+                      ?>"
                       style=" height: 30px; margin-top: 10px; width: 70%; border: none; border-bottom: 1px solid gray; padding-left: 8px; background-color: transparent; outline: none; border-radius: 0;">
               <input  type="password" 
                       placeholder="Password" 

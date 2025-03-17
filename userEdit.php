@@ -36,7 +36,7 @@
             $checkingData = $conn->query($checkData_sql);
             $regCountRow = mysqli_num_rows($checkingData);
             if($regCountRow > 0){
-              $err = "Usename already exist!";
+              $err = "Username already exist!";
             }else{
               $update_sql = "UPDATE user
                            SET first_name = '$newFname', 

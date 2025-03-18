@@ -32,23 +32,27 @@
           if(empty($newFname) || empty($newLname) || empty($newCnum) || empty($newUname) || empty($newPword)){
             $err = "All fields are required to input data!!";
           }else{
-            $checkData_sql = "SELECT * FROM user WHERE username = '$newUname' AND id != '$emp_id'";
-            $checkingData = $conn->query($checkData_sql);
-            $regCountRow = mysqli_num_rows($checkingData);
-            if($regCountRow > 0){
-              $err = "Username already exist!";
+            if(strlen($newCnum) !== 11){
+              $err = "Oops! Your contact number must contain exactly 11 digits.";
             }else{
-              $update_sql = "UPDATE user
-                           SET first_name = '$newFname', 
-                                last_name = '$newLname', 
-                                contact_number = '$newCnum', 
-                                username = '$newUname',
-                                password = '$newPword' 
-                           WHERE id = $emp_id";
-            $conn->query($update_sql);
-            header("location: welcome.php");
-            exit();
-            } 
+              $checkData_sql = "SELECT * FROM user WHERE username = '$newUname' AND id != '$emp_id'";
+              $checkingData = $conn->query($checkData_sql);
+              $regCountRow = mysqli_num_rows($checkingData);
+              if($regCountRow > 0){
+                $err = "Username already exist!";
+              }else{
+                $update_sql = "UPDATE user
+                            SET first_name = '$newFname', 
+                                  last_name = '$newLname', 
+                                  contact_number = '$newCnum', 
+                                  username = '$newUname',
+                                  password = '$newPword' 
+                            WHERE id = $emp_id";
+              $conn->query($update_sql);
+              header("location: welcome.php");
+              exit();
+              } 
+            }
           }
       }
     }
